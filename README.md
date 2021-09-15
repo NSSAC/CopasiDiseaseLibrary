@@ -6,7 +6,7 @@ Papers on which the codes are based can be found in the 'ReferenceLit' directory
                                                                              
 Documentation may be found at https://www.overleaf.com/read/tsyhztjmhdfv
 
-## Development and Deployment of the ShineyCOPASI Web Application
+## Development and Deployment of the ShinyCOPASI Web Application
 Currently changes pushed to the 'test' branch will trigger a rebuild of the Docker container, and deployment
 of the updated site (currenly [dismolib.uvadcos.io](http://dismolib.uvadcos.io/)). So a good workflow might be . . .
 
