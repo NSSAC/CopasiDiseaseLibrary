@@ -12,7 +12,7 @@ check.packages <- function(pkg){
   sapply(pkg, require, character.only = TRUE)
 }
 
-packages<-c('shiny','shinyjs', 'remotes', 'reshape2', 'ggplot2', 'shinyTree', 'markdown', 'formattable','XML','DT','knitr')
+packages<-c('shiny','shinyjs', 'remotes', 'reshape2', 'ggplot2', 'shinyTree', 'markdown', 'formattable','XML','DT','knitr','tinytex')
 check.packages(packages)
 
 if(!('CoRC' %in% installed.packages()[, 'Package'])){
@@ -75,7 +75,7 @@ ui <- fluidPage(
                                   uiOutput('show_output',inline = T)
                         )
                       )
-                      # includeMarkdown('about.md')
+                      
                       
              ),
              tabPanel("About",
@@ -84,8 +84,10 @@ ui <- fluidPage(
              tabPanel("Downloads",
                        includeMarkdown("downloads.md")),
              tabPanel("Documentation",
-                       tags$iframe(style="height:600px; width:100%", src="Disease_library_for_COPASI.pdf"
-                                   ))
+                  
+                       tags$iframe(style="height:600px; width:100%", src="Disease_library_for_COPASI.pdf")
+                      #tags$iframe(style="height:600px; width:100%", src = "")
+             )
                         
              ),
   hr(),

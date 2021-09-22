@@ -1,0 +1,1 @@
+Model Source Citation: Fred  Brauer,  Carlos  Castillo-Chavez,  and  Zhilan  Feng.Mathematical models in epi-demiology.  Springer, 2019 
