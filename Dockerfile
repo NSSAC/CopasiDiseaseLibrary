@@ -11,5 +11,9 @@ RUN Rscript -e 'install.packages("shinyTree", repos="http://cran.r-project.org",
 RUN Rscript -e 'install.packages("formattable", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'install.packages("XML", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'install.packages("DT", repos="http://cran.r-project.org", dependencies = TRUE)'
+RUN Rscript -e 'install.packages("tinytex", repos="http://cran.r-project.org", dependencies = TRUE)'
+RUN Rscript -e 'setwd("COPASI_web_mat3kk/overleaf_doc/")'
+RUN Rscript -e 'pdflatex("main.tex", pdf_file="../www/main.pdf")'
+RUN Rscript -e 'setwd("../../")'
 
 COPY COPASI_web_mat3kk/ /srv/shiny-server/
