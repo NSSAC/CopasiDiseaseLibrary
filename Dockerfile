@@ -12,7 +12,9 @@ RUN Rscript -e 'install.packages("formattable", repos="http://cran.r-project.org
 RUN Rscript -e 'install.packages("XML", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'install.packages("DT", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'install.packages("tinytex", repos="http://cran.r-project.org", dependencies = TRUE)'
-COPY COPASI_web_mat3kk/ /srv/shiny-server/
+RUN pwd
+RUN ls -l
+COPY COPASI_web_mat3kk /srv/shiny-server/COPASI_web_mat3kk
 WORKDIR /srv/shiny-server
 RUN ls -l 
 WORKDIR COPASI_web_mat3kk
