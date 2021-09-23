@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts,amsmath, amsthm}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage{appendix}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\geometry{margin = 1.25in}
+\title{\textit{dismolib}: Free database of user-interactive mathematical models for infectious diseases}
+\author{}
+\date{}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Compartmental models represent an accessible and powerful theoretic tool to study mechanism and dynamics of transmission processes. The adaptive nature of this modeling framework makes it a valuable teaching and research tool, for instance, on studying the effect of public health interventions and disease control policies. Hundreds of compartmental-based models of infectious diseases papers are often published every year for communicable diseases.
+%
+Several, if not all, of the modern mathematical models have foundational basis on a reduced set of basic models, that capture exclusively the fundamental mechanisms of transmission processes.
+With modern models being build on top of already ``standard'' baseline models, and using a fundamental set of analytical tools to describe underlying models' dynamics, a lot of duplicated effort is inevitable.
+%
+We believe that the characterization and collection of a set of seminal models will help on reducing the time and effort consumers of the research literature invest on finding standardized information about commonly modeled diseases.
+%
+In this work, we use well-established and standardized, computational and mathematical tools to provide a set of base models for highly pervasive diseases, using relevant modern disease examples.
+%
+The proposed computational environment provide a built-in and powerful analysis functionality that naturally foster autodidact users. We aim to make it easy for a researcher with any level of expertise to start developing knowledge by exploring well understood existing models, rather than starting on creating its own from scratch. 
+%
+Our goal is to provide a standardized transfer format so that derived models, built on top of commonly used and accepted ones, facilitate peer researchers to test, modify, and extend further.
+
+\section{Curation process}
+\begin{itemize}
+    \item Select disease modeling papers with a simple minimal model for a given example disease of a type.
+    \item Perform and document local stability analysis.
+    \item Encode the model in COPASI software so that it reproduces figures in the source paper.
+    \item Upload the code to the web application created using RShiny, COPASI, ShinyCopasi and CoRC.
+\end{itemize}
+
+
+\section{Features}
+\begin{enumerate}
+    \item On the web application, users can vary the parameter values corresponding to the interventions to observe changes to the time course, stability analysis, sensitivity analysis, optimization and parameter estimation.
+    \item Access to detailed documentation of each disease with mathematical analysis and potential extensions to the model (\url{http://dismolib.uvadcos.io/}).
+    \item Option to download the code file (COPASI or SBML format).
+    \item Option to easily download the results of the simulations.
+\end{enumerate}
+
+
+\section{Usage and Utility }
+The following summarizes how different classes of users might find this library and associated tools useful, as well as the general benefit.
+\begin{enumerate}
+    \item \textbf{Novice modelers and students}: The database provides a great set of examples for simple models for beginners. Additionally, it requires no coding experience to generate results based on the models. It also provides a great initial source of literature for different types of models and interventions.
+    \item \textbf{Epidemiologists}: With merely a few clicks, one can demonstrate the effect of various interventions for different diseases without requiring any coding, mathematical or computational experience.
+    \item \textbf{Mathematical modelers}: Quick and ready to use stability analysis and sensitivity analysis programs provide an easy way to validate the results. Importantly, the COPASI based models perform these tasks fast and easily even for tediously big systems (with a large number of compartments).
+    \item \textbf{Computational modelers}: Quick calibration, optimization and estimation of parameters is possible with a variety of methods to choose from. Extending a model to include any time-varying parameters only needs a file upload. 
+    \item \textbf{Published modelers}: The curated models in the database will be used for future research increasing their visibility and utility.
+\end{enumerate}
+
+Requests can be made for a particular model to be curated and/or included as well as for extensions to the existing models. We aim at making this database a collaborative project by infectious disease modelers. Rather than simply being a(nother) repository for models, the curation process also provides a reproduce-ability check for published results.
+
+\section{Future Direction}
+\begin{enumerate}
+    \item Include within host models
+    \item Automate adding spatial component to models
+    \item Tutorials demonstrating how different factors can easily be added and removed in a given model using COPASI
+    \item Stochastic models
+    \item Tutorial videos for using COPASI for disease models and for using the web application
+    \item Options to export to MATLAB
+    
+\end{enumerate}
+\end{document}

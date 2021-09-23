@@ -1,0 +1,116 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\title[]{\includegraphics[width = 0.4\textwidth]{dismolib.png}\\ A Library of Infectious Diseases Models}
+\author{Mugdha Thakur\\
+Brian Klahn\\
+Stefan Hoops\\
+Baltazar Espinoza}
+\institute{\includegraphics[width = 0.4\textwidth]{inst_bicomplex_4c_c.jpg}}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Background}
+
+\begin{itemize}
+  \item Lots of versions of models for any infectious disease exist (since a century now)
+  \item Researchers have to start from scratch to build a model and perform analytical exercises
+  \item Using parameter values from different sources for the same model impacts the time course simulation of the disease
+
+ 
+\end{itemize}
+
+\vskip 1cm
+
+\begin{block}{Examples}
+<Include examples of number of models for a disease with same structure>
+\end{block}
+
+\end{frame}
+
+\section{Highlights}
+
+%\subsection{Tables and Figures}
+
+\begin{frame}{Highlights}
+
+\begin{itemize}
+\item Computational and mathematical epidemiology tools for beginners
+\item Replication of the (simplest) models with vital characteristics for 10 diseases
+\item Easy addition of intervention(s) for the diseases in the model
+\item Remark on uniqueness/specialty of each model
+\item Remark on reproducibility (pointing at commonly missed information necessary for reproducing results)
+\end{itemize}
+
+% Commands to include a figure:
+%\begin{figure}
+%\includegraphics[width=\textwidth]{your-figure's-file-name}
+%\caption{\label{fig:your-figure}Caption goes here.}
+%\end{figure}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Next steps}
+
+\begin{itemize}
+    \item Web interface for the ease of use: Interactive modeling for parameters of choice, option to download the model to edit locally, option to submit a model.
+\item  Build a library of region-wise parameter sets for each disease (for various administrative levels)
+\begin{itemize}
+    \item E.g., National level parameter set for the US for all diseases
+\end{itemize}
+\item  Build an extension for each disease model with additional important factors
+\begin{itemize}
+    \item E.g., seasonality in COVID-19 (done), sex-segregated model for STDs, age-structured model for  Measles, metapopulation model for emerging diseases, etc.
+\end{itemize}
+\item  Time-dependent sensitivity analysis of each parameter (specially when it is an arbitrary assumption)
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Examples}
+    
+\end{frame}
+
+\begin{frame}{Resources}
+    \begin{itemize}
+        \item Webapp: \url{ http://dismolib.uvadcos.io/}
+        \item \textbf{dismolib} repository: \url{https://github.com/mugdhat2/CopasiDiseaseLibrary}
+        \item Documentation (in progress) of diseases, models and simulations: \url{https://www.overleaf.com/read/tsyhztjmhdfv}
+        \item Get COPASI: \url{copasi.org}
+    \end{itemize}
+\end{frame}
+
+\end{document}
