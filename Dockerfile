@@ -14,10 +14,8 @@ RUN Rscript -e 'install.packages("DT", repos="http://cran.r-project.org", depend
 RUN Rscript -e 'install.packages("tinytex", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN pwd
 RUN ls -l
-COPY COPASI_web_mat3kk /srv/shiny-server/COPASI_web_mat3kk
+COPY COPASI_web_mat3kk/ /srv/shiny-server/
 WORKDIR /srv/shiny-server
-RUN ls -l 
-WORKDIR COPASI_web_mat3kk
 RUN ls -l 
 WORKDIR overleaf_doc
 RUN ls -l
