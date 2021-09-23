@@ -15,5 +15,4 @@ RUN Rscript -e 'install.packages("tinytex", repos="http://cran.r-project.org", d
 RUN Rscript -e 'tinytex::install_tinytex()'
 COPY COPASI_web_mat3kk/ /srv/shiny-server/
 WORKDIR /srv/shiny-server/overleaf_doc
-RUN Rscript -e 'require(tinytex); pdflatex("main.tex", pdf_file="../www/main.pdf")'
-RUN ls -l ../www
+RUN Rscript -e 'tinytex::pdflatex("main.tex", pdf_file="../www/main.pdf")'
