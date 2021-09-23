@@ -13,6 +13,11 @@ jobs:
         name: Checkout repository
         uses: actions/checkout@v2
       -
+        name: Checkout submodules
+        env: 
+          GIT_ASKPASS: ./OVERLEAF_PASSWORD
+        run: echo echo ${{ secrets.OVERLEAF_PASSWORD }} > OVERLEAF_PASSWORD && chmod a+x OVERLEAF_PASSWORD && git submodule init && git config submodule.COPASI_web_mat3kk/overleaf_doc.url https://${{ secrets.OVERLEAF_USER }}@git.overleaf.com/5f70b98896d4f90001617491 && git submodule update
+      -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       -
