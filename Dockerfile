@@ -13,11 +13,11 @@ RUN Rscript -e 'install.packages("XML", repos="http://cran.r-project.org", depen
 RUN Rscript -e 'install.packages("DT", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'install.packages("tinytex", repos="http://cran.r-project.org", dependencies = TRUE)'
 COPY COPASI_web_mat3kk/ /srv/shiny-server/
-RUN cd /srv/shiny-server
+WORKDIR /srv/shiny-server
 RUN ls -l 
-RUN cd COPASI_web_mat3kk
+WORKDIR COPASI_web_mat3kk
 RUN ls -l 
-RUN cd overleaf_doc
+WORKDIR overleaf_doc
 RUN ls -l
 RUN Rscript -e 'pdflatex("main.tex", pdf_file="../www/main.pdf")'
 RUN Rscript -e 'setwd("../../")'
