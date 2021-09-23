@@ -14,10 +14,9 @@ jobs:
         uses: actions/checkout@v2
       -
         name: Checkout submodules
-        run: echo echo ${{ secrets.OVERLEAF_PASSWORD }} > OVERLEAF_PASSWORD && chmod a+x OVERLEAF_PASSWORD
         env: 
           GIT_ASKPASS: ./OVERLEAF_PASSWORD
-        run: git config credential.https://git.overleaf.com/5f70b98896d4f90001617491.username ${{ secrets.OVERLEAF_USER }} && git submodule update --init 
+        run: echo echo ${{ secrets.OVERLEAF_PASSWORD }} > OVERLEAF_PASSWORD && chmod a+x OVERLEAF_PASSWORD && git config credential.https://git.overleaf.com/5f70b98896d4f90001617491.username ${{ secrets.OVERLEAF_USER }} && git submodule update --init 
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
