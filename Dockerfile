@@ -19,5 +19,4 @@ WORKDIR /srv/shiny-server
 RUN ls -l 
 WORKDIR overleaf_doc
 RUN ls -l
-RUN Rscript -e 'pdflatex("main.tex", pdf_file="../www/main.pdf")'
-RUN Rscript -e 'setwd("../../")'
+RUN Rscript -e 'pdflatex("main.tex", pdf_file="www/main.pdf")'
