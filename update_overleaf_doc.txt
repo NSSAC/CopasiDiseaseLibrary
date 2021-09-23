@@ -1,0 +1,20 @@
+# See Subtree Merging on bottom of 
+# https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging
+# for more explanation.
+
+echo first making sure the remote ref is created, if it has not been already
+git remote add overleaf_doc_remote https://git.overleaf.com/5f70b98896d4f90001617491 2> /dev/null
+
+echo checkout local overleaf_doc_branch and create if it does not exist
+git checkout overleaf_doc_branch 2> /dev/null || git checkout -b overleaf_doc_branch overleaf_doc_remote/master
+
+echo fetch and merge in any changes from the remote
+git pull
+
+echo switch back to main branch
+git checkout main
+
+echo merging overleaf_doc_branch changes into main
+git merge --allow-unrelated-histories --squash -s recursive -Xsubtree=COPASI_web_mat3kk/overleaf_doc overleaf_doc_branch
+
+echo Now commit any updates, when ready.
