@@ -2,6 +2,7 @@ FROM rocker/shiny
 
 RUN apt-get update
 RUN apt-get install --yes libxml2-dev
+RUN apt-get install --yes libssl-dev
 RUN Rscript -e 'install.packages("shinyjs", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'install.packages("remotes", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'remotes::install_github("jpahle/CoRC")'
