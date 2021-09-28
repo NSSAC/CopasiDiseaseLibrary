@@ -5,6 +5,7 @@ RUN apt-get install --yes libxml2-dev
 RUN apt-get install --yes libssl-dev
 RUN apt-get install --yes libudunits2-dev
 RUN apt-get install --yes libharfbuzz-dev libfribidi-dev
+RUN apt-get install --yes libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
 RUN Rscript -e 'install.packages("shinyjs", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'install.packages("remotes", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'remotes::install_github("jpahle/CoRC")'
