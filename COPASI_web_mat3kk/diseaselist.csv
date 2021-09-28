@@ -3,6 +3,7 @@ ID,Description,Type
 CoViD-19,covid.cps,Airborne
 HSV-2,hsv-2.cps,Sexually-transmitted
 Cholera,cholera.cps,Water-borne
+Dengue,dengue.cps,Vector-borne
 Dysentery,dysentery.cps,Water-borne
 Ebola,ebola.cps,Airborne
 Malaria,malaria.cps,Vector-borne
