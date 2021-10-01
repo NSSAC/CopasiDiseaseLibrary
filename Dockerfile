@@ -13,3 +13,5 @@ RUN Rscript -e 'install.packages("XML", repos="http://cran.r-project.org", depen
 RUN Rscript -e 'install.packages("DT", repos="http://cran.r-project.org", dependencies = TRUE)'
 
 COPY COPASI_web_mat3kk/ /srv/shiny-server/
+WORKDIR /srv/shiny-server
+RUN sed -i "s/BUILD_TIMESTAMP/$(date -Iseconds)/" ui.R
