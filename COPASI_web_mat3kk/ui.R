@@ -91,5 +91,5 @@ ui <- fluidPage(
                         
              ),
   hr(),
-  print(paste0("Cite as: Biocomplexity Institute (University of Virginia), dismolib, http://dismolib.uvadcos.io/, 2021 [Accessed: ", format(Sys.Date(), "%m/%d/%Y"), "]"))
+  print(paste0("Cite as: Biocomplexity Institute (University of Virginia), dismolib, http://dismolib.uvadcos.io/, 2021 [Built: BUILD_TIMESTAMP, Accessed: ", format(Sys.Date(), "%m/%d/%Y"), "]"))
 )
