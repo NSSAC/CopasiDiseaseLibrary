@@ -22,3 +22,4 @@ WORKDIR /srv/shiny-server/overleaf_doc
 RUN Rscript -e 'tinytex::pdflatex("main.tex", pdf_file="../www/main.pdf")'
 WORKDIR /srv/shiny-server
 RUN sed -i "s/BUILD_TIMESTAMP/$(date -Iseconds)/" ui.R
+RUN chown -R shiny:shiny /srv/shiny-server
