@@ -3,8 +3,7 @@ name: Container Build CI
 on:
   push:
     branches:
-    - 'main'
-    - 'master'
+    - 'reset_working'
 
 jobs:
   build:
