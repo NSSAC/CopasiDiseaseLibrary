@@ -85,8 +85,7 @@ ui <- fluidPage(
                        includeMarkdown("downloads.md")),
              tabPanel("Documentation",
                   
-                      # tags$iframe(style="height:600px; width:100%", src="Disease_library_for_COPASI.pdf")
-                      tags$iframe(style="height:600px; width:100%", src = "main.pdf")
+                      tags$iframe(style="height:600px; width:100%", src = "dismolib.pdf")
              )
                         
              ),
