@@ -27,8 +27,8 @@ choices = setNames(diseaseList$Description,diseaseList$ID)
 
 ui <- fluidPage(
   tags$hr(style="border-width: 2px;border-color: #EB7703;"),
-  img(src="inst_bicomplex_4c_c.jpg", width=200),
-  img(src="copasi_new.png", width= 170, align= 'right'),
+  a(href="https://biocomplexity.virginia.edu/", img(src="inst_bicomplex_4c_c.jpg", width=200)),
+  a(href="https://github.com/copasi/shinyCOPASI", img(src="copasi_new.png", width= 170, align= 'right')),
   titlePanel(h1(img(src="dismolib.png", width= 300), align = 'center'), windowTitle = 'dismolib'),
   navbarPage("", id = "navbar",
              tabPanel("Home",
@@ -85,8 +85,7 @@ ui <- fluidPage(
                        includeMarkdown("downloads.md")),
              tabPanel("Documentation",
                   
-                      # tags$iframe(style="height:600px; width:100%", src="Disease_library_for_COPASI.pdf")
-                      tags$iframe(style="height:600px; width:100%", src = "main.pdf")
+                      tags$iframe(style="height:600px; width:100%", src = "dismolib.pdf")
              )
                         
              ),
