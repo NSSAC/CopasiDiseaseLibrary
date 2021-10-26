@@ -26,6 +26,7 @@ diseaseList = read.csv("diseaselist.csv", stringsAsFactors = F)
 choices = setNames(diseaseList$Description,diseaseList$ID)
 
 ui <- fluidPage(
+  tags$head(tags$link(rel="shortcut icon", href="dismolib_thumbnail.svg")),
   tags$hr(style="border-width: 2px;border-color: #EB7703;"),
   a(href="https://biocomplexity.virginia.edu/", img(src="inst_bicomplex_4c_c.jpg", width=200)),
   a(href="https://github.com/copasi/shinyCOPASI", img(src="copasi_new.png", width= 170, align= 'right')),
