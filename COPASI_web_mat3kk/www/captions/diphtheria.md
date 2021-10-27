@@ -1,0 +1,1 @@
+Model Source Citation: Ilahi, F., and A. Widiana. "The effectiveness of vaccine in the outbreak of diphtheria: mathematical model and simulation." In IOP Conference Series: Materials Science and Engineering, vol. 434, no. 1, p. 012006. IOP Publishing, 2018.
