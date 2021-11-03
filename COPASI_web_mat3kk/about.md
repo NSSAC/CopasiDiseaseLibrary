@@ -4,11 +4,11 @@ This web-based interface uses Shiny package in R, the framework from shinyCOPASI
 Team members from Biocomplexity Institute and Initiative, University of Virginia
 
 <ul>
-  <li>Mugdha Thakur</li>
-  <li>Baltazar Espinoza</li>
-  <li>Brian Klahn</li>
-  <li>Stefan Hoops</li>
-  <li>Madhav Marathe</li>
+  <li>[Mugdha Thakur](https://biocomplexity.virginia.edu/person/mugdha-thakur)</li>
+  <li>[Baltazar Espinoza](https://biocomplexity.virginia.edu/person/baltazar-espinoza)</li>
+  <li>[Brian Klahn](https://biocomplexity.virginia.edu/person/brian-klahn)</li>
+  <li>[Stefan Hoops](https://biocomplexity.virginia.edu/person/stefan-hoops)</li>
+  <li>[Madhav Marathe](https://biocomplexity.virginia.edu/person/madhav-marathe)</li>
 
 </ul> 
 
