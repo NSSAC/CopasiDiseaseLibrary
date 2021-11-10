@@ -735,7 +735,7 @@ server <- function(input, output, session) {
     }
     else if (selectedTask == 'Time Course'){
      
-      output[[1]] = splitLayout(numericInput('obsTime', paste0("Duration [", getTimeUnit(), "] :" ), ifelse(is.null(inputFile$modelData), 10, inputFile$settingsTC$duration), min = 1, max = 1000),numericInput('obsIntervalSize', 'Interval Size [s]:', ifelse(is.null(inputFile$modelData), 1, inputFile$settingsTC$dt), min = 0.0001, max = 100))
+      output[[1]] = splitLayout(numericInput('obsTime', paste0("Duration [", getTimeUnit(), "]:" ), ifelse(is.null(inputFile$modelData), 10, inputFile$settingsTC$duration), min = 1, max = 1000),numericInput('obsIntervalSize', paste0("Interval Size [", getTimeUnit(), "]:" ), ifelse(is.null(inputFile$modelData), 1, inputFile$settingsTC$dt), min = 0.0001, max = 100))
       output[[2]] = checkboxInput('startSteady','start in Steady State', value= ifelse(is.null(inputFile$modelData), F, inputFile$settingsTC$start_in_steady_state))
       output[[3]] = selectInput('timeCourseSelection', 'Select a Method:', choices = c('Deterministic (LSODA)'='deterministic'
                                                                                        ,'Stochastic (Gibson + Bruck) '='stochastic'
