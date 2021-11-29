@@ -17,6 +17,9 @@ RUN Rscript -e 'install.packages("XML", repos="http://cran.r-project.org", depen
 RUN Rscript -e 'install.packages("DT", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'install.packages("tinytex", repos="http://cran.r-project.org", dependencies = TRUE)'
 RUN Rscript -e 'tinytex::install_tinytex()'
+RUN Rscript -e 'install.packages("webshot", repos="http://cran.r-project.org", dependencies = TRUE)'
+RUN Rscript -e 'install.packages("wordcloud2", repos="http://cran.r-project.org", dependencies = TRUE)'
+RUN Rscript -e 'webshot::install_phantomjs()'
 COPY COPASI_web_mat3kk/ /srv/shiny-server/
 WORKDIR /srv/shiny-server/overleaf_doc
 RUN Rscript -e 'tinytex::pdflatex("main.tex", pdf_file="../www/dismolib.pdf")'
