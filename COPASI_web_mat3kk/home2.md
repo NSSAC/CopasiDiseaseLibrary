@@ -24,3 +24,11 @@ tab
 <a id="doc" href="#" class="action-button">Documentation</a>
 tab
 * [Download](http://copasi.org/Download/) COPASI to create your own models
+
+### <span style="color:navy">Models included:</span>
+
+**dismolib** provides you with coded and calibrated compartmental models for the following diseases:
+
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+ 
+ 

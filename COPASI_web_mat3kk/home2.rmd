@@ -30,3 +30,16 @@ print(text)
 ``` 
 tab
 * [Download](http://copasi.org/Download/) COPASI to create your own models
+
+### <span style="color:navy">Models included:</span>
+
+**dismolib** provides you with coded and calibrated compartmental models for the following diseases:
+
+```{r, eval = T, echo=F, results='asis'}
+ddat = read.csv("diseaselist.csv", stringsAsFactors = F)
+hw <- wordcloud2(table(ddat$ID[-1]), size = 0.2, minRotation = 0, maxRotation = 0, rotateRatio = 1, gridSize = 10)
+saveWidget(hw,"1.html",selfcontained = F)
+webshot::webshot("1.html","1.png",delay =1, zoom = 0.6, cliprect = "viewport", vheight = 300)
+ ```
+ 
+ 

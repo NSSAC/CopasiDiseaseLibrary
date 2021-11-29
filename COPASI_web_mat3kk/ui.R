@@ -12,7 +12,7 @@ check.packages <- function(pkg){
   sapply(pkg, require, character.only = TRUE)
 }
 
-packages<-c('shiny','shinyjs', 'remotes', 'reshape2', 'ggplot2', 'shinyTree', 'markdown', 'formattable','XML','DT','knitr','tinytex')
+packages<-c('shiny','shinyjs', 'remotes', 'reshape2', 'ggplot2', 'shinyTree', 'markdown', 'formattable','XML','DT','knitr','tinytex','wordcloud2','webshot')
 check.packages(packages)
 
 if(!('CoRC' %in% installed.packages()[, 'Package'])){
