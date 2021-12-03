@@ -786,4 +786,5 @@ server <- function(input, output, session) {
  session$allowReconnect(TRUE) 
  # session$allowReconnect("force")
   session$onSessionEnded(stopApp)
+  app_idle_timeout <- 0
 }
