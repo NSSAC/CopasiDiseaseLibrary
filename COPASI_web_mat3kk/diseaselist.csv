@@ -13,4 +13,4 @@ Zika,zika.cps,Vector-borne
 Dengue,dengue.cps,Vector-borne
 Visceral Leishmaniasis,visceralleishmaniasis.cps,Vector-borne
 CoVid-19 (with delay in recovery),covid_mexico.cps,Airborne
-Diphtheria,diptheria.cps,Airborne
+Diphtheria,diphtheria.cps,Airborne
